@@ -40,8 +40,10 @@ export default Component.extend({
     return isEqual(this.get('groupValue'), this.get('value'));
   }).readOnly(),
 
+  changed() {},
+
   sendChangedAction() {
-    this.sendAction('changed', this.get('value'));
+    this.changed(this.get('value'));
   },
 
   change() {

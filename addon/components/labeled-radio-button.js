@@ -22,9 +22,11 @@ export default Component.extend({
 
   'for': readOnly('radioId'),
 
+  changed() {},
+
   actions: {
     innerRadioChanged(value) {
-      this.sendAction('changed', value);
+      this.changed(value);
     }
   }
 });
