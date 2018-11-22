@@ -40,9 +40,11 @@ export default Component.extend({
     return isEqual(this.get('groupValue'), this.get('value'));
   }).readOnly(),
 
+  changed() {},
+
   actions: {
     changed(newValue) {
-      this.sendAction('changed', newValue);
+      this.changed(newValue);
     }
   }
 });
